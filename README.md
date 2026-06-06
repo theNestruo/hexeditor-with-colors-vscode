@@ -1,13 +1,19 @@
 # Hex Editor with Colors
 
+[![Visual Studio Marketplace](https://vsmarketplacebadges.dev/version-short/theNestruo.hexeditor-with-colors.png)](https://marketplace.visualstudio.com/items?itemName=theNestruo.hexeditor-with-colors)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/theNestruo/hexeditor-with-colors)](https://open-vsx.org/extension/theNestruo/hexeditor-with-colors)
+
 Fork of Microsoft [Hex Editor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.hexeditor) VS Code extension, with colors.
+
+![Hex Editor with Colors
+ screenshot](screenshot.png)
 
 ## Changes
 
 - Reduce decoded text cell width (fixes [#566](https://github.com/microsoft/vscode-hexeditor/issues/566), [PR](https://github.com/microsoft/vscode-hexeditor/pull/601))
-- Add "Open in Hex Editor" command
+- Add "Open in Hex Editor" command ([PR](https://github.com/microsoft/vscode-hexeditor/pull/602))
 - Remove telemetry
-- Add rendering styles: colors for both bytes and decoded text, and glyphs for decoded text
+- Add rendering styles: colors for both bytes and decoded text, and glyphs for decoded text (fixes [#567](https://github.com/microsoft/vscode-hexeditor/issues/597), [PR](https://github.com/microsoft/vscode-hexeditor/pull/603))
 
 ## New settings
 

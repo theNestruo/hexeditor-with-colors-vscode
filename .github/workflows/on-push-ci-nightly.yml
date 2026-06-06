@@ -1,0 +1,40 @@
+name: CI and nightly build on main
+
+permissions:
+  contents: read
+  packages: write
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v6
+
+    - name: Install Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: 20
+
+    - run: npm ci
+
+    - name: Install vsce
+      run: npm install --global @vscode/vsce
+
+    - run: vsce package
+
+    - name: Read version
+      id: get-version
+      uses: martinbeentjes/npm-get-version-action@main
+
+    - name: Upload nightly build
+      uses: actions/upload-artifact@v7
+      with:
+        name: hexeditor-with-colors-${{ steps.get-version.outputs.current-version}}-nightly
+        path: hexeditor-with-colors-${{ steps.get-version.outputs.current-version}}.vsix

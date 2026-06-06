@@ -278,6 +278,7 @@
           "type": "webview",
           "id": "hexEditor.dataInspectorView",
           "name": "%dataInspectorView%",
+          "icon": "panel-icon.svg",
           "when": "hexEditor:showSidebarInspector"
         }
       ]
