@@ -1,3 +1,7 @@
+## 2.1.0
+
+- Improve Braille representation
+
 ## 2.0.0
 
 - Initial release as `theNestruo:hexeditor-with-colors`
