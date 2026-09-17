@@ -1,3 +1,7 @@
+## 2.2.0
+
+- Maintenance release
+
 ## 2.1.0
 
 - Improve Braille representation
